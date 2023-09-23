@@ -14,18 +14,22 @@
 
    [Documentación Swagger](https://cabaprop.ar/api/v1/integration-docs#/)
 
-## Comenzando
+## Primeros pasos
 
-Antes de comenzar, asegúrate de tener acceso a tus credenciales de integración proporcionadas por CABAPROP. Si aún no las tienes, por favor, ponte en contacto con nuestro equipo de soporte.
+Antes de comenzar, asegúrate de tener acceso a tus credenciales de integración proporcionadas por CABAPROP. Cada inmobiliario matriculado tiene acceso al portal de administración donde puede conseguir las credenciales y enviartelas.
+
+[Crear Credenciales](Credenciales.md)
 
 ## Soporte Técnico
 
 Si tienes alguna pregunta o encuentras algún problema durante el proceso de integración, no dudes en ponerte en contacto con nuestro equipo de soporte técnico. Estamos aquí para ayudarte en todo momento.
 
-Esperamos que esta documentación te sea de gran utilidad en tu proceso de integración con CABAPROP. ¡Comienza a integrar tus propiedades y aprovecha al máximo nuestro portal!
+Para poder contactar al soporte técnico, es necesario que completes el siguiente formulario.
+
+[COMPLETAR FORMULARIO](https://google.com)
 
 
-> **Note:** **Additional API Blueprint Resources**
+> **CONTENIDO:** **Listado de los diferentes contenidos en esta documentación**
 >
 > + [Language Specification][specification]
 > + [Examples][API Blueprint Examples]
