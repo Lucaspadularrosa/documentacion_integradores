@@ -92,6 +92,9 @@ En el ejemplo, publicaremos un departamento en venta recordando que todos las pu
 
 Primero crearemos la propiedad con todos sus valores, y luego subiremos las imagenes, las publicaciones permanecen pendientes hasta que tengan minimo 3 imagenes.
 
+>**IMPORTANTE**
+>Para publicar una propiedad, debemos enviar si o si el campo Bra
+
 ```bash
 curl -X 'POST' \
   'http://localhost:9000/api/integration' \
@@ -245,10 +248,31 @@ de respuesta, en el cual podemos ver que la propiedad se creo correctamente y qu
 > El campo *external_reference* es un campo opcional que puede ser utilizado para identificar la propiedad en tu sistema. Este campo no se mostrará en el portal CABAPROP.
 
 
-## Subir Imagenes
+## Subir Imagenes y Planos
 
 Para subir imagenes a una propiedad, debemos agregar el id de la propiedad en el endpoint de imagenes informado en swager, en el ejemplo, subiremos 1 imagen a la propiedad creada anteriormente.
 Adicionalmente podremos subir planos y tambien videos por url, estos videos fueron subidos al momento de publicar, pero en el caso que necesitemos modificarlos o enviarlos en este momento, pueden hacerlo.
+
+De esta manera estaremos subiendo una imagen enviando un archivo que se guardara en el servidor de CABAPROP, en el caso que quieran enviar una imagen por url, pueden hacerlo en el endpoint de subir propiedad agregando la llave images de esta manera, en ese caso, la imagen se mostrará desde la url enviada.
+  
+  ```json
+  {
+    "images": [
+      {
+          "url" : "https://http2.mlstatic.com/D_862027-MLA69003406493_042023-O.jpg",
+          "title" : "Ejemplo URL",
+          "originalname" : "Ejemplo URL",
+          "filename" : null
+      },
+      {
+          "url" : "https://http2.mlstatic.com/D_961640-MLA69003406489_042023-O.jpg",
+          "title" : "Ejemplo URL",
+          "originalname" : "Ejemplo URL",
+          "filename" : null
+      }
+    ]
+  }
+  ```
 
 ```bash
 curl -X 'PATCH' \
