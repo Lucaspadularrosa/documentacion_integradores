@@ -16,7 +16,7 @@ Recibiras un Json similar a este:
 
 ```json
 {
-  "realEstateId": {
+  "realEstate": {
     "id": 18033,
     "name": "Inmobiliaria Uno",
     "description": null,
@@ -27,28 +27,6 @@ Recibiras un Json similar a este:
     "isActive": true,
     "created_at": "2023-09-21T21:39:38.730Z",
     "updated_at": "2023-09-21T21:39:38.730Z",
-    "user": {
-      "id": "fc964920-4e76-4be2-826e-09ffbb24f809",
-      "firstName": "Aspirante",
-      "lastName": "Uno",
-      "email": "aspirante@uno.com",
-      "password": "$2b$10$afHGp6gb0MM6zPItHdjf2.Z3oudXPF7Q51L.0qZyz.SSJaAiRqhVe",
-      "photo": null,
-      "fixNumber": null,
-      "phoneNumber": "1125456856",
-      "dni": "38597510",
-      "realAddress": null,
-      "legalAddress": null,
-      "typeOfUser": "admin",
-      "adminUserId": null,
-      "status": "active",
-      "registration": null,
-      "matricula": "1234",
-      "bypassed": true,
-      "created_at": "2023-09-21T21:39:38.714Z",
-      "updated_at": "2023-09-21T21:39:38.714Z",
-      "deleted_at": null
-    }
   },
   "branchOfficeId": [
     {
