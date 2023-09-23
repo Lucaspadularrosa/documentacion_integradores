@@ -45,21 +45,4 @@ Si tienes alguna pregunta o encuentras algún problema durante el proceso de int
 
 Para poder contactar al soporte técnico, es necesario que completes el siguiente formulario.
 
-[COMPLETAR FORMULARIO](https://google.com)
-
-
-> **CONTENIDO:** **Listado de los diferentes contenidos en esta documentación**
->
-> + [Language Specification][specification]
-> + [Examples][API Blueprint Examples]
-> + [Glossary of Terms][API Blueprint Glossary of Terms]
-> + [API Blueprint Map][map]
-> + [Tools for API Blueprint][Tooling Section]
-
-
-```apib
-# GET /message
-+ Response 200 (text/plain)
-
-        Hello World!
-```
+[COMPLETAR FORMULARIO](https://forms.gle/QSSKnsnLj8qTLcFA8)

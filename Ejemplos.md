@@ -16,19 +16,17 @@ Recibiras un Json similar a este:
 
 ```json
 {
-  "realEstate": {
-    "id": 18033,
-    "name": "Inmobiliaria Uno",
-    "description": null,
-    "logo": null,
-    "socialNetworks": {},
-    "email": "aspirante@uno.com",
-    "old_id": null,
-    "isActive": true,
-    "created_at": "2023-09-21T21:39:38.730Z",
-    "updated_at": "2023-09-21T21:39:38.730Z",
-  },
-  "branchOfficeId": [
+  "id": 18033,
+  "name": "Inmobiliaria Uno",
+  "description": null,
+  "logo": null,
+  "socialNetworks": {},
+  "email": "aspirante@uno.com",
+  "old_id": null,
+  "isActive": true,
+  "created_at": "2023-09-21T21:39:38.730Z",
+  "updated_at": "2023-09-21T21:39:38.730Z",
+  "branchOffice": [
     {
       "id": 18033,
       "branch_office_name": "Casa Central AVDA SANTA FE 1234",
