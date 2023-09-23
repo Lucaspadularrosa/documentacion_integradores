@@ -120,10 +120,10 @@ curl -X 'POST' \
       "years": 10
     },
     "price": {
-      "currency": 2,
+      "currency": 1,
       "total": 80000,
-      "expenses": 1,
-      "expensesCurrency": 10000
+      "expenses": 60000,
+      "expensesCurrency": 2
     },
     "characteristics": {
       "ambience": 1,
@@ -329,8 +329,8 @@ curl -X 'PATCH' \
     "price": {
       "currency": 2,
       "total": 80000,
-      "expenses": 1,
-      "expensesCurrency": 10000
+      "expenses": 60000,
+      "expensesCurrency": 2
     },
     "characteristics": {
       "ambience": 1,

@@ -40,10 +40,10 @@
       "years": 10
     },
     "price": {
-      "currency": 2,
-      "total": 80000,
-      "expenses": 1,
-      "expensesCurrency": 10000
+      "currency": 1,
+      "total": 5000,
+      "expenses": 60000,
+      "expensesCurrency": 2
     },
     "characteristics": {
       "ambience": 1,
