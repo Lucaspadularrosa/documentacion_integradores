@@ -16,7 +16,7 @@ Hasta el momento, la única notificación disponible es cuando un usuario envía
 {
     "apiKey": "kib5tcxwsw5ain9ppngi9fodmiks0z",
     "type": "message",
-    "action": "create.message",
+    "action": "create",
     "id": 44444,
 }
 ```
@@ -47,3 +47,5 @@ curl -X 'GET' \
 Recibiras los datos del interesado, el ID de la propiedad, los datos de la sucursal a la que estan consultando y un objeto con todos los mensajes de la conversación.
 
 Seguiremos trabajando para agregar más notificaciones en el futuro. Si tienes alguna sugerencia, no dudes en ponerte en contacto con nosotros.
+
+[🔙 Volver a inicio](Readme.md)

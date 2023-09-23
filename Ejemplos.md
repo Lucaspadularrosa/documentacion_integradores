@@ -6,13 +6,13 @@
 
 ## Obtener Token
 
-Una vez que cuentes con el ApiKey, puedes obtener el token en la sección Authentication del swagger.
+Una vez que cuentes con el ApiKey, puedes obtener el token, revisa los endpoints de Authentication en el swagger para obtener el token.
 
 ## Mis Datos
 
 Para obtener los datos del inmobiliario y sus diferentes sucursales, en la sección de Authentication del swagger, debes ingresar el token obtenido en el paso anterior.
 
-Recibiras un Json similar a este:
+Recibiras un JSON similar a este:
 
 ```json
 {
@@ -48,7 +48,7 @@ Recibiras un Json similar a este:
 
 ## Mis Propiedades
 
-En la sección Api's Integration del swagger, puedes consultar las propiedades que tienes publicadas en CABAPROP.
+En la sección Api's Integration del swagger, puedes consultar los endopoints para obtener las propiedades que tienes publicadas en tu cuenta de CABAPROP.
 
 Por ejemplo, en este curl puedes ver como obtener las propiedades publicadas en el tipo venta, los tipos de operaciones y otros recursos se pueden consultar en la sección Utils del swagger. [Documentación Swagger](https://cabaprop.ar/api/v1/integration-docs#/Utils)
 
@@ -66,10 +66,10 @@ curl -X 'POST' \
 
 En el ejemplo, publicaremos un departamento en venta recordando que todos las publicaciones deben ser de la ciudad de buenos aires.
 
-Primero crearemos la propiedad con todos sus valores, y luego subiremos las imagenes, las publicaciones permanecen pendientes hasta que tengan minimo 3 imagenes.
+Primero crearemos la propiedad con todos sus valores, y luego subiremos las imagenes y planos.
 
 >**IMPORTANTE**
->Para publicar una propiedad, debemos enviar si o si el campo Bra
+>Para publicar una propiedad, debemos enviar si o si el campo BranchOfficeId, este campo es el id de la sucursal en la cual se publicará la propiedad, este campo se puede obtener en el endpoint de mis datos. [Mis Datos](Ejemplos.md#mis-datos)
 
 ```bash
 curl -X 'POST' \
@@ -224,7 +224,29 @@ de respuesta, en el cual podemos ver que la propiedad se creo correctamente y qu
 > El campo *external_reference* es un campo opcional que puede ser utilizado para identificar la propiedad en tu sistema. Este campo no se mostrará en el portal CABAPROP.
 
 
-## Subir Imagenes y Planos
+En caso que quieran subir urls de imagenes por url, a la llamada anterior pueden agregarle las imagenes como en este ejemplo:
+  
+  ```json
+  {
+      "images": [
+          {
+              "url" : "https://http2.mlstatic.com/D_862027-MLA69003406493_042023-O.jpg",
+              "title" : "Ejemplo URL",
+              "originalname" : "Ejemplo URL",
+              "filename" : null
+          },
+          {
+              "url" : "https://http2.mlstatic.com/D_961640-MLA69003406489_042023-O.jpg",
+              "title" : "Ejemplo URL",
+              "originalname" : "Ejemplo URL",
+              "filename" : null
+          }
+      ]
+  }
+  ```
+
+
+## Subir imagenes y planos para guardar en los servidores de CABAPROP
 
 Para subir imagenes a una propiedad, debemos agregar el id de la propiedad en el endpoint de imagenes informado en swager, en el ejemplo, subiremos 1 imagen a la propiedad creada anteriormente.
 Adicionalmente podremos subir planos y tambien videos por url, estos videos fueron subidos al momento de publicar, pero en el caso que necesitemos modificarlos o enviarlos en este momento, pueden hacerlo.
@@ -267,9 +289,7 @@ curl -X 'PATCH' \
 Al subir imagenes por url, mostraremos las urls desde la cual se descargaron las imagenes, en el caso que no se puedan descargar, se mostrara un error.
 Ejemplo, si subo una imagen que esta en https://miweb.com/imagen1.jpg, en la web de CABAPROP buscaremos la imagen en esa url.
 
-```bash
-
-```
+Las mismas pueden agregarse y modificarse como mostramos anterior mente en el endpoint de subir propiedad y en el endpoint de actualizar propiedad.
 
 # Actualizar Propiedad
 
