@@ -1,0 +1,137 @@
+{
+    "external_reference": "documentacionCabaprop1",
+    "title": "Departamento en venta Documentación",
+    "description": "Esto es una descripción para mi departamento",
+    "real_estate_id": 18033,
+    "branch_office_id": 18033,
+    "operation_type": 1,
+    "property_type": 1,
+    "sub_property_type": 15,
+    "location": {
+      "barrios": [
+        31,
+        32
+      ],
+      "area_level_1": "Buenos Aires",
+      "area_level_2": "Comuna 7",
+      "cp": "C1406",
+      "cp_suffix": "string",
+      "letter": "string",
+      "lat": -34.921452,
+      "lng": -57.954528,
+      "locality": "Buenos Aires",
+      "street" : "Av. Rivadavia",
+      "number": 1234
+    },
+    "share": {
+      "active": true,
+      "percent": 30
+    },
+    "surface": {
+      "totalSurface": 100,
+      "coveredSurface": 75,
+      "uncoveredSurface": 25,
+      "semiCoveredSurface": 25,
+      "exclusiveSurface": 25
+    },
+    "antiquity": {
+        "type" : 1,
+      "years": 10
+    },
+    "price": {
+      "currency": 2,
+      "total": 80000,
+      "expenses": 1,
+      "expensesCurrency": 10000
+    },
+    "characteristics": {
+      "ambience": 1,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "privateBathroom": 1,
+      "toilettes": 0,
+      "underground": true,
+      "building": true,
+      "accessibilities": true,
+      "inhabited": true,
+      "hasPoster": true
+    },
+    "ambiences_types": {},
+    "video": "https://www.youtube.com/watch?v=123456789",
+    "video360": "https://www.youtube.com/watch?v=123456789",
+    "extras": {
+      "serviciosEsenciales": {
+        "abl": true,
+        "aysa": true,
+        "gas": true,
+        "electricidad": true,
+        "internet_wifi": true,
+        "tv_cable": true,
+        "telefono": true,
+        "agua_corriente": true
+      },
+      "vista": {
+        "calle": true,
+        "pulmonManzana": false,
+        "jardin": false,
+        "plaza": true,
+        "abierta": true
+      },
+      "seguridad": {
+        "alarma": true,
+        "puertaBlindada": false,
+        "grupoElectrogeno": false
+      },
+      "calefaccion": {
+        "ventilador": true,
+        "aireAcondicionado": true,
+        "split": true,
+        "caldera_central": true,
+        "caldera_individual": true,
+        "calefaccion_central": true,
+        "calefaccion_estufa_gas": true,
+        "calefaccion_losa_central": true,
+        "calefaccion_losa_individual": true,
+        "calefaccion_radiadores_central": true,
+        "calefaccion_radiadores_individual": true,
+        "calefaccion_placas_bajo_consumo": true,
+        "termotanque_calefon": true,
+        "chimenea": true
+      },
+      "vigilancia": {
+        "encargado": true,
+        "encargado_virtual": true,
+        "portero_electrico": true,
+        "camaras": true,
+        "vigilancia_24hs": true,
+        "vigilancia_diurna": true,
+        "vigilancia_nocturna": true,
+        "vigilancia_fin_de_semana": true
+      },
+      "adicionales": {
+        "termotanque_electrico": true,
+        "termotanque_gas": true,
+        "cocina_electrica": true,
+        "cocina_gas": true,
+        "amoblado": true,
+        "placards": true,
+        "cancha_paddle": true,
+        "cancha_tenis": true,
+        "gimnasio": true,
+        "hidromasaje": true,
+        "laundry": true,
+        "microcine": true,
+        "parrilla": true,
+        "piscina": true,
+        "sala_de_juegos": true,
+        "sauna": true,
+        "solarium": true,
+        "spa": true,
+        "sum": true,
+        "centros_comerciales_cercanos": true,
+        "escuelas_cercanas": true,
+        "parques_cercanos": true,
+        "estacionamiento_visitas": true
+      }
+    }
+  }

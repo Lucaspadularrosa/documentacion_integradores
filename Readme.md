@@ -16,9 +16,28 @@
 
 ## Primeros pasos
 
-Antes de comenzar, asegúrate de tener acceso a tus credenciales de integración proporcionadas por CABAPROP. Cada inmobiliario matriculado tiene acceso al portal de administración donde puede conseguir las credenciales y enviartelas.
+1. Antes de comenzar, asegúrate de tener acceso a tus credenciales de integración proporcionadas por CABAPROP. Cada inmobiliario matriculado tiene acceso al portal de administración donde puede conseguir las credenciales y enviartelas.
 
-[Crear Credenciales](Credenciales.md)
+    [Crear Credenciales](Credenciales.md)
+
+2. Revisar la documentación de la API para familiarizarse con los diferentes endpoints y sus parámetros.
+
+    [Documentación Swagger](https://cabaprop.ar/api/v1/integration-docs#/)
+
+3. Tenemos disponible un entorno de test para que puedas realizar todas las pruebas necesarias antes de publicar tus propiedades en el portal CABAPROP. Para acceder a este entorno, enviaremos las credenciales a cada integrador que nos contacte.
+
+    > **IMPORTANTE**
+    >
+    > Las credenciales de pruebas son válidas únicamente para el entorno de pruebas. Una vez que hayas finalizado las pruebas, debes utilizar las credenciales de producción para publicar tus propiedades en el portal CABAPROP.
+
+4. Revisar Ejemplos de Integración para ver casos de uso comunes.
+
+    * [Obtener Token](Ejemplos.md#obtener-token)
+    * [Mis Datos](Ejemplos.md#mis-datos)
+    * [Mis Propiedades](Ejemplos.md#mis-propiedades)
+    * [Publicar Propiedad](Ejemplos.md#publicar-propiedad)
+    * [Actualizar Propiedad](Ejemplos.md#actualizar-propiedad)
+    * [Eliminar Propiedad](Ejemplos.md#eliminar-propiedad)
 
 ## Soporte Técnico
 
