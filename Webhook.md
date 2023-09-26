@@ -39,7 +39,7 @@ La conversación se puede consultar a través del endpoint:
 
 ```
 curl -X 'GET' \
-  'https://cabaprop.com.ar/api/integration/get-conversation/[ID_CONVERSACION]' \
+  'https://cabaprop.com.ar/api/v1/integration/get-conversation/[ID_CONVERSACION]' \
   -H 'accept: */*' \
   -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiIzdjd2aThpZHdpbmxqaGFxNm9odGZwbzZzcGNhbGoiLCJzZWNyZXQiOiJ1aDR6NGtiYTZzM2EzdTU0MHFrYXJsaXUxeGJtbGFxbm0xeWlicml4cW1xaWlqeThlaXkzbnI2MjZtYXhkNjY1IiwidXNlcklkIjoiZmM5NjQ5MjAtNGU3Ni00YmUyLTgyNmUtMDlmZmJiMjRmODA5IiwibmFtZSI6Ik1pQXBwIiwiaWF0IjoxNjk1NDc4MTg4LCJleHAiOjE2OTgxMDYxODh9.f-2mBpbj2VadnN6l3004u2Z-QO-y_LqhU79DmwoGrVc'
 ```

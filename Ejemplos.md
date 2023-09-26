@@ -54,7 +54,7 @@ Por ejemplo, en este curl puedes ver como obtener las propiedades publicadas en 
 
 ```bash
 curl -X 'POST' \
-  'https://cabaprop.com.ar/api/integration/find-properties?offset=0&limit=10&realEstateId=18033' \
+  'https://cabaprop.com.ar/api/v1/integration/find-properties?offset=0&limit=10&realEstateId=18033' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -73,7 +73,7 @@ Primero crearemos la propiedad con todos sus valores, y luego subiremos las imag
 
 ```bash
 curl -X 'POST' \
-  'http://localhost:9000/api/integration' \
+  'https://cabaprop.com.ar/api/v1/integration' \
   -H 'accept: */*' \
   -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiIzdjd2aThpZHdpbmxqaGFxNm9odGZwbzZzcGNhbGoiLCJzZWNyZXQiOiJ1aDR6NGtiYTZzM2EzdTU0MHFrYXJsaXUxeGJtbGFxbm0xeWlicml4cW1xaWlqeThlaXkzbnI2MjZtYXhkNjY1IiwidXNlcklkIjoiZmM5NjQ5MjAtNGU3Ni00YmUyLTgyNmUtMDlmZmJiMjRmODA5IiwibmFtZSI6Ik1pQXBwIiwiaWF0IjoxNjk1NDgxNTUxLCJleHAiOjE2OTgxMDk1NTF9.hVpC6h2Tv7N1jhfmV_t9a9dz5vTUUWoYpEraQfjf35Y' \
   -H 'Content-Type: application/json' \
@@ -274,7 +274,7 @@ De esta manera estaremos subiendo una imagen enviando un archivo que se guardara
 
 ```bash
 curl -X 'PATCH' \
-  'https://cabaprop.com.ar/api/integration/upload-multimedia/650f010c66578aecc5e5f80a' \
+  'https://cabaprop.com.ar/api/v1/integration/upload-multimedia/650f010c66578aecc5e5f80a' \
   -H 'accept: */*' \
   -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiIzdjd2aThpZHdpbmxqaGFxNm9odGZwbzZzcGNhbGoiLCJzZWNyZXQiOiJ1aDR6NGtiYTZzM2EzdTU0MHFrYXJsaXUxeGJtbGFxbm0xeWlicml4cW1xaWlqeThlaXkzbnI2MjZtYXhkNjY1IiwidXNlcklkIjoiZmM5NjQ5MjAtNGU3Ni00YmUyLTgyNmUtMDlmZmJiMjRmODA5IiwibmFtZSI6Ik1pQXBwIiwiaWF0IjoxNjk1NDgxNTUxLCJleHAiOjE2OTgxMDk1NTF9.hVpC6h2Tv7N1jhfmV_t9a9dz5vTUUWoYpEraQfjf35Y' \
   -H 'Content-Type: multipart/form-data' \
@@ -298,7 +298,7 @@ El body debe ser el mismo que al crear una propiedad pero con los datos actualiz
 Por ejemplo, si quisieramos pausar una propiedad, enviamos el mismo body que al crear la propiedad pero con el campo status en "paused"
 ```bash
 curl -X 'PATCH' \
-  'http://localhost:9000/api/integration/basic-data/650f0b41fb6f0eb918dfe355' \
+  'https://cabaprop.com.ar/api/v1/integration/basic-data/650f0b41fb6f0eb918dfe355' \
   -H 'accept: */*' \
   -H 'x-api-key: 3v7vi8idwinljhaq6ohtfpo6spcalj' \
   -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiIzdjd2aThpZHdpbmxqaGFxNm9odGZwbzZzcGNhbGoiLCJzZWNyZXQiOiJ1aDR6NGtiYTZzM2EzdTU0MHFrYXJsaXUxeGJtbGFxbm0xeWlicml4cW1xaWlqeThlaXkzbnI2MjZtYXhkNjY1IiwidXNlcklkIjoiZmM5NjQ5MjAtNGU3Ni00YmUyLTgyNmUtMDlmZmJiMjRmODA5IiwibmFtZSI6Ik1pQXBwIiwiaWF0IjoxNjk1NDgxNTUxLCJleHAiOjE2OTgxMDk1NTF9.hVpC6h2Tv7N1jhfmV_t9a9dz5vTUUWoYpEraQfjf35Y' \
@@ -455,7 +455,7 @@ Como respuesta recibiremos un status 200 con el siguiente body
 Para eliminar una propiedad, debemos enviar el id de la propiedad y el apikey en el endpoint de eliminar propiedad informado en swager, en el ejemplo, eliminaremos la propiedad creada anteriormente.
 ```bash
 curl -X 'DELETE' \
-  'https://cabaprop.com.ar/api/integration/logical/650f108283f4e7920c9b3486' \
+  'https://cabaprop.com.ar/api/v1/integration/logical/650f108283f4e7920c9b3486' \
   -H 'accept: */*' \
   -H 'x-api-key: 3v7vi8idwinljhaq6ohtfpo6spcalj' \
   -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiIzdjd2aThpZHdpbmxqaGFxNm9odGZwbzZzcGNhbGoiLCJzZWNyZXQiOiJ1aDR6NGtiYTZzM2EzdTU0MHFrYXJsaXUxeGJtbGFxbm0xeWlicml4cW1xaWlqeThlaXkzbnI2MjZtYXhkNjY1IiwidXNlcklkIjoiZmM5NjQ5MjAtNGU3Ni00YmUyLTgyNmUtMDlmZmJiMjRmODA5IiwibmFtZSI6Ik1pQXBwIiwiaWF0IjoxNjk1NDgxNTUxLCJleHAiOjE2OTgxMDk1NTF9.hVpC6h2Tv7N1jhfmV_t9a9dz5vTUUWoYpEraQfjf35Y'
