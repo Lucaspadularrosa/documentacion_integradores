@@ -10,11 +10,15 @@ Puedes configurar notificaciones mediante webhooks en el panel del inmobiliario 
 
 Una vez configurado, el webhook enviará información automáticamente cuando se produzcan eventos registrados. Esto evita la necesidad de realizar búsquedas constantes para obtener respuestas y, en consecuencia, reduce la carga del sistema y previene la pérdida de datos en situaciones específicas.
 
-Hasta el momento, la única notificación disponible es cuando un usuario envía un mensaje a través de CABAPROP, enviaremos un JSON por POST a la url indicada en el panel de integración con el siguiente formato.
+Hasta el momento, la única notificación disponible es cuando un usuario envía un mensaje a través de CABAPROP, enviaremos un JSON por POST a la url indicada en el panel de integración, la misma puede tener dos tipos de estructura:
+
+# Caso 1: Clientes registrados
+
+Si el cliente se encuentra registrado en cabaprop, la notificación llegará de la siguiente manera:
 
 ```json
 {
-    "apiKey": "kib5tcxwsw5ain9ppngi9fodmiks0z",
+    "apiKey": "kib5tcxwsw5ain9ppngi9fodmiks0z", // Tu apiKey
     "type": "message",
     "action": "create",
     "id": 44444,
@@ -45,6 +49,34 @@ curl -X 'GET' \
 ```
 
 Recibiras los datos del interesado, el ID de la propiedad, los datos de la sucursal a la que estan consultando y un objeto con todos los mensajes de la conversación.
+
+
+# Caso 2: Clientes no registrados
+
+Si el cliente no se encuentra registrado en cabaprop, y completa el formulario sin estar logueado, la notificación llegará de la siguiente manera:
+
+```json
+{
+  "apiKey": "158p8efmrlzi4a69dzjjd170zmxz0x", // Tu apiKey
+  "type": "message",
+  "action": "create",
+  "id": null,
+  "description": "{
+    "name": "Lucas Padularrosa",
+    "email": "test@test.com",
+    "phone": "3413065110",
+    "message": "Hola, estoy interesado en esta propiedadsss xxxx",
+    "propertyId": "661ec99de54652efa0a6ca3f"
+  }" // Datos del interesado, parsear el string para obtener los datos
+}
+
+```
+
+>**IMPORTANTE**
+>
+>Por el momento, el campo description es un string que ustedes deberan parsear para obtener los datos del mismo.
+
+
 
 Seguiremos trabajando para agregar más notificaciones en el futuro. Si tienes alguna sugerencia, no dudes en ponerte en contacto con nosotros.
 
