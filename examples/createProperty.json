@@ -54,6 +54,9 @@
       "underground": true,
       "building": true,
       "accessibilities": true,
+      "aptProfessional": true,
+      "aptCredit": true,
+      "aptMascota": true,
       "inhabited": true,
       "hasPoster": true
     },
