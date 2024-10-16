@@ -68,8 +68,8 @@ En el ejemplo, publicaremos un departamento en venta recordando que todos las pu
 
 Primero crearemos la propiedad con todos sus valores, y luego subiremos las imagenes y planos.
 
->**IMPORTANTE**
->Para publicar una propiedad, debemos enviar si o si el campo BranchOfficeId, este campo es el id de la sucursal en la cual se publicará la propiedad, este campo se puede obtener en el endpoint de mis datos. [Mis Datos](Ejemplos.md#mis-datos)
+> **IMPORTANTE**
+> Para publicar una propiedad, debemos enviar si o si el campo BranchOfficeId, este campo es el id de la sucursal en la cual se publicará la propiedad, este campo se puede obtener en el endpoint de mis datos. [Mis Datos](Ejemplos.md#mis-datos)
 
 ```bash
 curl -X 'POST' \
@@ -132,6 +132,8 @@ curl -X 'POST' \
       "underground": true,
       "building": true,
       "accessibilities": true,
+      "aptProfessional": true,
+      "aptCredit": true,
       "inhabited": true,
       "hasPoster": true
     },
@@ -217,34 +219,32 @@ curl -X 'POST' \
 ```
 
 En el ejemplo, enviamos un json como en [este ejemplo](examples/createProperty.json) y recibimos un json como en [este ejemplo](examples/createPropertyResponse.json)
-de respuesta, en el cual podemos ver que la propiedad se creo correctamente y que se encuentra pendiente de publicación, Tomaremos el id de la imagen del campo ***_id***
+de respuesta, en el cual podemos ver que la propiedad se creo correctamente y que se encuentra pendiente de publicación, Tomaremos el id de la imagen del campo **_\_id_**
 
 > **IMPORTANTE**
 >
-> El campo *external_reference* es un campo opcional que puede ser utilizado para identificar la propiedad en tu sistema. Este campo no se mostrará en el portal CABAPROP.
-
+> El campo _external_reference_ es un campo opcional que puede ser utilizado para identificar la propiedad en tu sistema. Este campo no se mostrará en el portal CABAPROP.
 
 En caso que quieran subir urls de imagenes por url, a la llamada anterior pueden agregarle las imagenes como en este ejemplo:
-  
-  ```json
-  {
-      "images": [
-          {
-              "url" : "https://http2.mlstatic.com/D_862027-MLA69003406493_042023-O.jpg",
-              "title" : "Ejemplo URL",
-              "originalname" : "Ejemplo URL",
-              "filename" : null
-          },
-          {
-              "url" : "https://http2.mlstatic.com/D_961640-MLA69003406489_042023-O.jpg",
-              "title" : "Ejemplo URL",
-              "originalname" : "Ejemplo URL",
-              "filename" : null
-          }
-      ]
-  }
-  ```
 
+```json
+{
+  "images": [
+    {
+      "url": "https://http2.mlstatic.com/D_862027-MLA69003406493_042023-O.jpg",
+      "title": "Ejemplo URL",
+      "originalname": "Ejemplo URL",
+      "filename": null
+    },
+    {
+      "url": "https://http2.mlstatic.com/D_961640-MLA69003406489_042023-O.jpg",
+      "title": "Ejemplo URL",
+      "originalname": "Ejemplo URL",
+      "filename": null
+    }
+  ]
+}
+```
 
 ## Subir imagenes y planos para guardar en los servidores de CABAPROP
 
@@ -252,25 +252,25 @@ Para subir imagenes a una propiedad, debemos agregar el id de la propiedad en el
 Adicionalmente podremos subir planos y tambien videos por url, estos videos fueron subidos al momento de publicar, pero en el caso que necesitemos modificarlos o enviarlos en este momento, pueden hacerlo.
 
 De esta manera estaremos subiendo una imagen enviando un archivo que se guardara en el servidor de CABAPROP, en el caso que quieran enviar una imagen por url, pueden hacerlo en el endpoint de subir propiedad agregando la llave images de esta manera, en ese caso, la imagen se mostrará desde la url enviada.
-  
-  ```json
-  {
-    "images": [
-      {
-          "url" : "https://http2.mlstatic.com/D_862027-MLA69003406493_042023-O.jpg",
-          "title" : "Ejemplo URL",
-          "originalname" : "Ejemplo URL",
-          "filename" : null
-      },
-      {
-          "url" : "https://http2.mlstatic.com/D_961640-MLA69003406489_042023-O.jpg",
-          "title" : "Ejemplo URL",
-          "originalname" : "Ejemplo URL",
-          "filename" : null
-      }
-    ]
-  }
-  ```
+
+```json
+{
+  "images": [
+    {
+      "url": "https://http2.mlstatic.com/D_862027-MLA69003406493_042023-O.jpg",
+      "title": "Ejemplo URL",
+      "originalname": "Ejemplo URL",
+      "filename": null
+    },
+    {
+      "url": "https://http2.mlstatic.com/D_961640-MLA69003406489_042023-O.jpg",
+      "title": "Ejemplo URL",
+      "originalname": "Ejemplo URL",
+      "filename": null
+    }
+  ]
+}
+```
 
 ```bash
 curl -X 'PATCH' \
@@ -296,6 +296,7 @@ Las mismas pueden agregarse y modificarse como mostramos anterior mente en el en
 Para actualizar una propiedad, debemos enviar el id de la propiedad y el apikey en el endpoint de actualizar propiedad informado en swager, en el ejemplo, actualizaremos la propiedad creada anteriormente.
 El body debe ser el mismo que al crear una propiedad pero con los datos actualizados.
 Por ejemplo, si quisieramos pausar una propiedad, enviamos el mismo body que al crear la propiedad pero con el campo status en "paused"
+
 ```bash
 curl -X 'PATCH' \
   'https://cabaprop.com.ar/api/v1/integration/basic-data/650f0b41fb6f0eb918dfe355' \
@@ -452,7 +453,9 @@ Como respuesta recibiremos un status 200 con el siguiente body
 ```
 
 # Eliminar Propiedad
+
 Para eliminar una propiedad, debemos enviar el id de la propiedad y el apikey en el endpoint de eliminar propiedad informado en swager, en el ejemplo, eliminaremos la propiedad creada anteriormente.
+
 ```bash
 curl -X 'DELETE' \
   'https://cabaprop.com.ar/api/v1/integration/logical/650f108283f4e7920c9b3486' \
